@@ -3,13 +3,13 @@
 require_relative 'my_enumerable'
 
 # Create MyList class
-class CustomList
+class MyList
   include MyEnumerable
-  def initialize(*items)
-    @items = items
+  def initialize(*list)
+    @list = list
   end
 
   def iterate(&block)
-    @items.each { |item| block.call(item) }
+    @list.each { |item| block.call(item) }
   end
 end

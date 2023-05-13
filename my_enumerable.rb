@@ -1,20 +1,20 @@
 # Create MyEnumerable module
 module MyEnumerable
-  def my_all?
+  def all?
     each do |element|
       return false unless yield(element)
     end
     true
   end
 
-  def my_any?
+  def any?
     each do |element|
       return true if yield(element)
     end
     false
   end
 
-  def my_select
+  def filter
     result = []
     each do |element|
       result << element if yield(element)
